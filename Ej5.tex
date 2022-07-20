@@ -1,0 +1,24 @@
+\item Sea $S$ el subespacio de $\R^4$ generado por $B=\{(-1,0,-1,1);(0,1,0,-1);(-1,1,-1,0)\}$. ¿Es $B$ una base de $S$? Hallar una base de $S$ y extenderla a una de $\R^4$
+    \begin{mdframed}[style=s]
+        Se sabe que $S$ está generado por $B$, sin embargo, eso no me garantiza que los vectores de $B$ sean una base. Para que lo sean, deben ser li.
+        \begin{center}
+            $x_1(-1,0,-1,1)+x_2(0,1,0,-1)+x_3(-1,1,-1,0)=(0,0,0,0)\to \begin{cases}
+                -x_1-x_3=0\\
+                x_2+x_3=0\\
+                -x_1-x_3=0\\
+                x_1-x_2=0
+            \end{cases}\to\begin{cases}
+                x_1=-x_3\\
+                x_2=-x_3
+            \end{cases}$
+        \end{center}
+        Podemos elegir $x_1=x_2=-x_3=1$ y la ecuación se satisface, por ende, son ld. Me quedo con dos de estos vectores para formar una base de $S$:
+        \begin{center}
+            $B^*=\{(-1,0,-1,1);(0,1,0,-1)\}$
+        \end{center}
+        como son dos vectores y no son múltiplos, entonces son li. Para extender la base a una de $\R^4$, hay que agregar dos vectores que sean li con los de la base $B^*$, propongo $(0,0,1,0)$ y $(0,0,0,1)$. Se puede verificar que efectivamente son li y por lo tanto 
+        \begin{center}
+            $B_1=\{(-1,0,-1,1);(0,1,0,-1);(0,0,1,0);(0,0,0,1)\}$    
+        \end{center}
+        es base de $\R^4$.
+    \end{mdframed}

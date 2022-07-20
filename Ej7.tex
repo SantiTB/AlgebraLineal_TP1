@@ -1,0 +1,122 @@
+\item Hallar una base para $\C^{2\times2}$ como $\R$-EV y como $\C$-EV. ¿Qué dimensión tiene $\C^{2\times2}$ como $\R$-EV?¿y como $\C$-EV?
+    \begin{mdframed}[style=s]
+        \begin{itemize}
+            \item Primero vamos con el caso en que $\C^{2\times2}$ es un $\R$-EV.\\
+                Sea $A\in\C^{2\times2},$
+                \begin{center}
+                    $A=\begin{pmatrix}
+                        a&b\\
+                        c&d
+                    \end{pmatrix}\quad a,b,c,d\in\C$    
+                \end{center}
+                Para encontrar una base necesito un conjunto de matrices linealmente independiente que me generen todo $\C^{2\times2}$. Lo primero que se me ocurre es 
+                \begin{center}
+                    $B_1=\left\{\begin{pmatrix}
+                        1&0\\0&0
+                    \end{pmatrix};\begin{pmatrix}
+                        0&1\\0&0
+                    \end{pmatrix};\begin{pmatrix}
+                        0&0\\1&0
+                    \end{pmatrix};\begin{pmatrix}
+                        0&0\\0&1
+                    \end{pmatrix}\right\}$    
+                \end{center}
+                Pero como estamos considerando a $\C^{2\times2}$ como $\R$-EV, no hay manera de generar matrices con entradas complejas ya que los escalares son reales. Para subsanar este incoveniente quizás se pueda pensar en 
+                \begin{center}
+                    $B_2=\left\{\begin{pmatrix}
+                        1+i&0\\0&0
+                    \end{pmatrix};\begin{pmatrix}
+                        0&1+i\\0&0
+                    \end{pmatrix};\begin{pmatrix}
+                        0&0\\1+i&0
+                    \end{pmatrix};\begin{pmatrix}
+                        0&0\\0&1+i
+                    \end{pmatrix}\right\}$    
+                \end{center}
+                Sin embargo, otra vez tengo problemas, ya que ahora puedo tener entradas con parte real y compleja, pero no hay manera de obtener entradas con sólo parte compleja ni tampoco entradas puramente reales (la idea de estas matrices, con todas las entradas nulas excepto una, es encontrar un equivalente a una base canónica para este espacio, ya que son bastante sencillas para trabajar). Cada entrada tiene el mismo incoveniente, el de separar parte real de imaginaria. Para esto, necesito dos matrices, una con entrada real y la otra imaginaria, de esta forma puedo cubrir todos los casos. Entonces,
+                \begin{center}
+                    $B=\left\{\begin{pmatrix}
+                        1&0\\0&0
+                    \end{pmatrix};\begin{pmatrix}
+                        0&1\\0&0
+                    \end{pmatrix};\begin{pmatrix}
+                        0&0\\1&0
+                    \end{pmatrix};\begin{pmatrix}
+                        0&0\\0&1
+                    \end{pmatrix};\begin{pmatrix}
+                        i&0\\0&0
+                    \end{pmatrix};\begin{pmatrix}
+                        0&i\\0&0
+                    \end{pmatrix};\begin{pmatrix}
+                        0&0\\i&0
+                    \end{pmatrix};\begin{pmatrix}
+                        0&0\\0&i
+                    \end{pmatrix}\right\}$   
+                \end{center}
+                genera $\C^{2\times2}$ como $\R$-EV. Ahora para ver si es una base, hay que comprobar que los elementos de $B$ sean li.
+                \begin{tightcenter}
+                    $x_1\begin{pmatrix}
+                        1&0\\0&0
+                    \end{pmatrix}+x_2\begin{pmatrix}
+                        0&1\\0&0
+                    \end{pmatrix}+x_3\begin{pmatrix}
+                        0&0\\1&0
+                    \end{pmatrix}+x_4\begin{pmatrix}
+                        0&0\\0&1
+                    \end{pmatrix}+x_5\begin{pmatrix}
+                        i&0\\0&0
+                    \end{pmatrix}+x_6\begin{pmatrix}
+                        0&i\\0&0
+                    \end{pmatrix}+x_7\begin{pmatrix}
+                        0&0\\i&0
+                    \end{pmatrix}+x_8\begin{pmatrix}
+                        0&0\\0&i
+                    \end{pmatrix}=\begin{pmatrix}
+                        0&0\\0&0
+                    \end{pmatrix}\quad x_i\in\R,i=1,\dots,8$
+                \end{tightcenter}
+                $\begin{cases}
+                    x_1+ix_5=0\\
+                    x_2+ix_6=0\\
+                    x_3+ix_7=0\\
+                    x_4+ix_8=0
+                \end{cases}\to x_1=x_2=x_3=x_4=x_5=x_6=x_7=x_8=0\to$ son li. Por lo tanto, $B$ es base.\\
+                Como la base está formada por 8 elementos, dim$(\C^{2\times2})=8$ como $\R$-EV.
+            \item Considerando a $C^{2\times2}$ como $\C$-EV.\\
+                Vuelvo a probar 
+                \begin{center}
+                    $B_1=\left\{\begin{pmatrix}
+                        1&0\\0&0
+                    \end{pmatrix};\begin{pmatrix}
+                        0&1\\0&0
+                    \end{pmatrix};\begin{pmatrix}
+                        0&0\\1&0
+                    \end{pmatrix};\begin{pmatrix}
+                        0&0\\0&1
+                    \end{pmatrix}\right\}$    
+                \end{center}
+                Ahora ya no tengo el problema de no poder generar una matriz con entradas complejas, ya que los escalares pueden serlo. De hecho un $A\in\C^{2\times2}$ es 
+                \begin{tightcenter}
+                    $A=\begin{pmatrix}
+                        a_{11}+ib_{11}&a_{12}+ib_{12}\\a_{21}+ib_{21}&a_{22}+ib_{22}
+                    \end{pmatrix}$\\$=(a_{11}+ib_{11})\begin{pmatrix}
+                        1&0\\0&0
+                    \end{pmatrix}+(a_{12}+ib_{12})\begin{pmatrix}
+                        0&1\\0&0
+                    \end{pmatrix}+(a_{21}+ib_{21})\begin{pmatrix}
+                        0&0\\1&0
+                    \end{pmatrix}+(a_{22}+ib_{22})\begin{pmatrix}
+                        0&0\\0&1
+                    \end{pmatrix}$\\$=z_{11}\begin{pmatrix}
+                        1&0\\0&0
+                    \end{pmatrix}+z_{12}\begin{pmatrix}
+                        0&1\\0&0
+                    \end{pmatrix}+z_{21}\begin{pmatrix}
+                        0&0\\1&0
+                    \end{pmatrix}+z_{22}\begin{pmatrix}
+                        0&0\\0&1
+                    \end{pmatrix}\quad z_{11},z_{12},z_{21},z_{22}\in\C$
+                \end{tightcenter}
+                Por lo tanto, los elementos de $B_1$ generan $\C^{2\times2}$ y como además se ve que son li, $B$ es base. Al tener 4 elementos, dim$(\C^{2\times2})=4$ como $\C$-EV.
+        \end{itemize}
+    \end{mdframed}

@@ -1,0 +1,44 @@
+\item Probar que $B=\{(1,-1,-1,-1);(0,1,1,0);(1,2,0,0);(0,1,2,-1)\}$ es una base de $\C^4$ (como $\C$-EV)
+    \begin{mdframed}[style=s]
+        Me tengo que fijar si son li. Una forma de hacerlo es comprobar que la única manera de generar el vector nulo es con todos escalares iguales a 0.
+        \begin{center}
+            $z_1(1,-1,-1,-1)+z_2(0,1,1,0)+z_3(1,2,0,0)+z_4(0,1,2,-1)=(0,0,0,0)\quad z_1,z_2,z_3,z_4\in\C$
+            $\begin{cases}
+                z_1+z_3=0\\
+                -z_1+z_2+2z_3+z_4=0\\
+                -z_1+z_2+2z_4=0\\
+                -z_1-z_4=0
+            \end{cases}\to\begin{cases}
+                z_1=-z_3\\
+                z_2=-4z_3\\
+                z_4=-3z_3\\
+                z_4=z_3
+            \end{cases}\to z_3=0\to z_1=z_2=z_4=0$
+        \end{center}
+        Otra manera de verificar la independencia lineal es armar una matriz cuyas columnas son los vectores en cuestión y calcular el determinante, si es cero, entonces son ld, de lo contrario son li.
+        \begin{tightcenter}
+            $\begin{vmatrix}
+                1&0&1&0\\
+                -1&1&2&1\\
+                -1&1&0&2\\
+                -1&0&0&-1
+            \end{vmatrix}=1\begin{vmatrix}
+                1&2&1\\
+                1&0&2\\
+                0&0&-1
+            \end{vmatrix}-0\begin{vmatrix}
+                -1&2&1\\
+                -1&0&2\\
+                -1&0&-1
+            \end{vmatrix}+1\begin{vmatrix}
+                -1&1&1\\
+                -1&1&2\\
+                -1&0&-1
+            \end{vmatrix}-0\begin{vmatrix}
+                -1&1&2\\
+                -1&1&0\\
+                -1&0&0
+            \end{vmatrix}$\\
+            $=1[-2(1(-1))]+1[-1(1(-1))-1(-1(-1)-2(-1))+1(-1(-1))]=2+1[1-1(1+2)+1]=2-1=1\neq 0$
+        \end{tightcenter}
+    \end{mdframed}

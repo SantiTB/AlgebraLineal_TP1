@@ -1,0 +1,30 @@
+\item Sean $W_1$ y $W_2$ subespacios de un espacio vectorial $V$ ¿Son $W_1\cap W_2$ y $W_1\cup W_2$ subespacios de $V$?. Justificar.
+    \begin{mdframed}[style=s]
+        Dado $s_1,s_2\in W_1\cap W_2, \lambda\in\mathbb{K}$
+        \begin{enumerate}
+            \item[i.] $\vec{0}\in W_1\cap W_2$ ya que $\vec{0}\in W_1, \vec{0}\in W_2$ por ser subespacios.
+            \item[ii.] $\begin{cases}
+                    s_1+s_2\in W_1 \text{ ya que } s_1\in W_1,s_2\in W_1\\
+                    s_1+s_2\in W_2 \text{ ya que } s_1\in W_2,s_2\in W_2
+                \end{cases}\to s_1+s_2\in W_1\cap W_2$
+            \item[iii.] $\begin{cases}
+                    \lambda s_1\in W_1 \text{ ya que } s_1\in W_1,\\
+                    \lambda s_1\in W_2 \text{ ya que } s_1\in W_2
+                \end{cases}\to \lambda s_1\in W_1\cap W_2$
+        \end{enumerate}
+        Se concluye que $W_1\cap W_2$ es un subespacio de $V$.\\
+        En el caso de la unión no sucede lo mismo.\\
+        Supongamos que 
+        \begin{tightcenter}
+            $V=\R^2,W_1=\{(x,y)\in\R^2:y=0\},W_2=\{(x,y)\in\R^2:x=0\}$    
+        \end{tightcenter}
+        Ahora sean 
+        \begin{tightcenter}
+            $v_1=(1,0)\in W_1\cup W_2, v_2=(0,1)\in W_1\cup W_2$    
+        \end{tightcenter}
+        se tiene que 
+        \begin{tightcenter}
+            $v_1+v_2=(1,1)\notin W_1\cup W_2$    
+        \end{tightcenter}
+        Entonces, la unión no es cerrada bajo adición. Por lo tanto, no es un subespacio.
+    \end{mdframed}

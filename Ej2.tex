@@ -1,0 +1,27 @@
+\item Sea GL$(3, \C) := \{A \in \C^{3\times3} : A$ es inversible$\}$. ¿Es GL$(3, \C)$ un $\C$-EV con la suma dada por $A + B = AB$ y el producto por un escalar usual?
+    \begin{mdframed}[style=s]
+        Uno podría pensar que se tiene el mismo incoveniente que en el último inciso del ejercicio anterior. Sin embargo, en este caso no contamos con la definición usual de la suma. Primero, voy a tratar de encontrar el elemento neutro de la suma al cual llamaré $N$. Por definición, este elemento debe cumplir:
+        \begin{center}
+            $N+X=X+N=X\quad\forall X\in$ GL$(3,\C)$\\
+            $\to NX=XN=X$
+        \end{center}
+        La matriz $N$ que cumple estas propiedades es la matriz identidad. Con esto en mente me fijo si se cumplen las 3 condiciones.
+        \begin{enumerate}
+            \item[i.] $N=I\in$ GL$(3,\C)$ ya que la inversa de la identidad es la propia identidad.
+            \item[ii.] Dadas $A,B\in$ GL$(3,\C)$, entonces existen matrices $A^*,B^*$ tales que
+                $\begin{cases}
+                    AA^*=A^*A=I\\
+                    BB^*=B^*B=I
+                \end{cases}\\\to A+B=AB$. Si considero la matriz $B^*A^*\to \begin{cases}
+                    ABB^*A^*=ANA^*=AA^*=N\\
+                    B^*A^*AB=B^*NB=B^*B=N
+                \end{cases}$\\
+                Con lo cual $A+B$ es cerrada bajo adición.
+            \item[iii.] Sea $\alpha\in\C$, $X\in$ GL$(3,\C)\to \exists X^*:XX^*=X^*X=N$\\
+                $\begin{cases}
+                    \alpha XX^*=\alpha N=N\\
+                    X^*\alpha X=\alpha X^*X=\alpha N=N
+                \end{cases}\to$ es cerrada bajo producto por escalar.
+        \end{enumerate}
+        Por lo tanto, GL$(3,\C)$ es un $\C$-EV
+    \end{mdframed}

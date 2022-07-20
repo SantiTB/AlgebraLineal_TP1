@@ -1,0 +1,29 @@
+\item Sean $W_1$ y $W_2$ subespacios de un espacio vectorial $V$ tales que, $W_1\cap W_2=\{0\}$ y $V=W_1+W_2$. Probar que, dado $v\in V$, existen únicos $w_1\in W_1$ y $w_2\in W_2$ tales que $v=w_1+w_2$
+    \begin{mdframed}[style=s]
+        Supongamos las bases $B_1=\{v_1,\dots,v_m\}, B_2=\{v_{m+1},\dots,v_n\}$ de $W_1$ y $W_2$ respectivamente. Dado un $v\in V$, este puede ser escrito como
+        \begin{center}
+            $v=w_1+w_2, \quad w_1\in W_1,w_2\in W_2$
+        \end{center}
+        debido a que $V=W_1+W_2$. Por lo tanto,
+        \begin{center}
+            $v=x_1v_1+\dots+x_mv_m+x_{m+1}v_{m+1}+\dots+x_nv_n$
+        \end{center}
+        Si $v$ se pudiese escribir como la suma de otros dos vectores, tenemos la siguiente situación
+        \begin{center}
+            $v=y_1v_1+\dots+y_mv_m+y_{m+1}v_{m+1}+\dots+y_nv_n$
+        \end{center}
+        Restando ambas igualdades obtenemos
+        \begin{center}
+            $0=(x_1-y_1)v_1+\dots+(x_m-y_m)v_m+(x_{m+1}-y_{m+1})v_{m+1}+\dots+(x_n-y_n)v_n$
+        \end{center}
+        Como $W_1\cap W_2=\{0\}\to$ los $v_i,i=1,\dots,n$ son vectores li y forman una base de $V$, entonces por definición de independencia lineal
+        \begin{equation*}
+            \sum_{i=1}^n(x_i-y_i)v_i=0\Leftrightarrow(x_i-y_i)=0\quad\forall i=1,\dots,n
+        \end{equation*}
+        Por lo tanto,
+        \begin{center}
+            $x_i=y_i\quad\forall i=1,\dots,n$
+        \end{center}
+        Lo que implica que $v$ se puede escribir de manera única.\vspace{6pt}\\
+        A modo de ejemplo, se puede pensar en $V=\R^2,W_1=\{(x,y)\in\R^2:y=0\},W_2=\{(x,y)\in\R^2:x=0\}$. Si quisiese representar al $(1,1)$ es claro que la única manera es con el $(1,0)$ y el $(0,1)$.
+    \end{mdframed}

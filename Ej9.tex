@@ -1,0 +1,31 @@
+\item Sea $B=\{x^k:k\in\mathbb{N}\}\subset\C[x]$
+    \begin{enumerate}
+        \item Probar que todo subconjunto finito de $B$ es linealmente independiente.
+            \begin{mdframed}[style=s]
+                Un subconjunto $A$ de $B$ será de la forma: 
+                \begin{center}
+                    $A=\{x^{k_1},x^{k_2},\dots,x^{k_n}\}\quad k_i\neq k_j,\forall j\neq i\quad i,j=1,\dots,n$    
+                \end{center}
+                Para saber si son li, tengo que verificar que la única solución a 
+                \begin{equation}
+                    \sum_{i=1}^n\alpha_ix^{k_i}=0,\quad \alpha_i\in\C
+                \end{equation}
+                sea la trivial. Se puede reescribir al polinomio nulo como
+                \begin{equation*}
+                    0=\sum_{i=1}^n0\cdot x^{k_i}
+                \end{equation*}
+                Se ve que el polinomio nulo tiene coeficiente 0 para toda potencia de $x$ y como los elementos de $A$ tienen todos exponentes diferentes, la única manera que (1) sea cierta es si $\alpha_i=0\quad\forall i$, por ende, $A$ es un conjunto linealmente independiente.
+            \end{mdframed}
+        \item ¿Es $B$ una base de $\C[x]$ como $\C$-EV?
+            \begin{mdframed}[style=s]
+                En el inciso anterior, se vio que todo subconjunto de $B$ es linealmente independiente. En particular, $B$ es un subconjunto de si mismo, con lo cual $B$ es li. Resta ver que genere a $\C[x]$. Dado un $p\in\C[x]$, éste puede escribirse como 
+                \begin{equation*}
+                    p(x)=\sum_{i=1}^n\alpha_ix^{k_i}\quad \alpha_i\in\C,\forall i
+                \end{equation*}
+                Que es exactamente una combinación lineal de los elementos de $B$, entonces $B$ genera $\C[x]$. Por lo tanto, es base.
+            \end{mdframed}
+        \item ¿Cuál es la dimensión de $\C[x]$ como $\C$-EV?
+            \begin{mdframed}[style=s]
+                La dimensión del espacio está determinada por la cantidad de elementos de una base, en este caso $B$ tiene $n$ elementos, este número natural puede ser tan grande como quiera, entonces $dim(\C[x])=\infty$
+            \end{mdframed}
+    \end{enumerate}

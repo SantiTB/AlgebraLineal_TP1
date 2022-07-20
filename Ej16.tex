@@ -1,0 +1,37 @@
+\item Sea $C(\R)$ el $\R$-EV de las funciones continuas de $\R$ en $\R$, con las operaciones usuales. Si $V\subset C(\R)$ es el conjunto de funciones pares y $W\subset C(\R)$ el de las impares, probar que:
+    \begin{enumerate}
+        \item $V$ y $W$ son subespacios de $C(\R)$.
+            \begin{mdframed}[style=s]
+                \begin{itemize}
+                    \item $V=\{f\in C(\R):f(x)=f(-x)\quad\forall x\in\R\}$
+                        \begin{enumerate}
+                            \item $f(x)=0\in V$ ya que $f(x)=f(-x)=0$
+                            \item Sean $f_1,f_2\in V\to (f_1+f_2)(x)=f_1(x)+f_2(x)=f_1(-x)+f_2(-x)=(f_1+f_2)(-x)\to f_1+f_2\in V$
+                            \item Sean $\alpha\in\R,f\in V\to (\alpha f)(x)=\alpha f(x)=\alpha f(-x)=(\alpha f)(-x)\to\alpha f\in V$
+                        \end{enumerate}
+                        Se concluye que $V$ es subespacio.
+                    \item $W=\{f\in C(\R):f(-x)=-f(x)\quad\forall x\in\R\}$
+                        \begin{enumerate}
+                            \item $f(x)=0\in V$ ya que $f(-x)=-f(x)=0$
+                            \item Sean $f_1,f_2\in V\to (f_1+f_2)(-x)=f_1(-x)+f_2(-x)=-f_1(x)-f_2(x)=-(f_1+f_2)(x)\to f_1+f_2\in V$
+                            \item Sean $\alpha\in\R,f\in V\to (\alpha f)(-x)=\alpha f(-x)=-\alpha f(x)=-(\alpha f)(x)\to\alpha f\in V$
+                        \end{enumerate}
+                        Se concluye que $W$ es subespacio.
+                \end{itemize}
+            \end{mdframed}
+        \item $V\cap W=\{0\}$.
+            \begin{mdframed}[style=s]
+                La intersección estará formada funciones que sean pares e impares a la vez. Es decir, tienen que satisfacer
+                \begin{enumerate}
+                    \item $f(x)=f(-x)$
+                    \item $f(-x)=-f(x)$
+                \end{enumerate}
+                Entonces, $f(x)=-f(x)\to f(x)=0\to V\cap W=\{0\}$
+            \end{mdframed}
+        \item $V+W=C(\R)$.
+            \begin{mdframed}[style=s]
+                Implica que toda función continua puede ser escrita como la suma de una función par y otra impar.\\
+                Como $V$ y $W$ son subespacios, $V+W$ también lo es.\\
+                \textbf{Completar.}
+            \end{mdframed}
+    \end{enumerate}
